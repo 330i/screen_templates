@@ -23,7 +23,7 @@ class _ResultPageState extends State<ResultPage> {
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-    Colors.white ,Colors.white10,Colors.deepOrangeAccent
+    Colors.black ,Colors.white
     ]
     )
     ),
@@ -32,7 +32,7 @@ class _ResultPageState extends State<ResultPage> {
       children: <Widget>[
 
       SizedBox(
-      height: 350,
+      height: 430,
       width: 300,
         child: Column(
 
@@ -46,8 +46,8 @@ class _ResultPageState extends State<ResultPage> {
         width: 150,
         decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.purple, Colors.deepOrangeAccent],
-            ),borderRadius: BorderRadius.circular(55)
+              colors: [Colors.purple,  Colors.white,Colors.white,Colors.purple,],
+            ),borderRadius: BorderRadius.circular(66)
         ),
           child: Text("OBJECT NAME",
             style: TextStyle(
@@ -76,9 +76,71 @@ class _ResultPageState extends State<ResultPage> {
         ),
         Text("How to reduce Carbon Emmision?",
           style: TextStyle(fontWeight: FontWeight.bold,height: 3, fontSize: 20),),
+        Container(
+            margin: EdgeInsets.symmetric(vertical: 20.0),
+            height: 200.0,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: <Widget>[
+                Container(
+                  width: 200.0,
+                decoration: new BoxDecoration(
+                  image: new DecorationImage(
+                    image: ExactAssetImage('assets/carbon1.jpg'),
+                    fit: BoxFit.fitHeight,
+                  ),
+                ),
+
+                ),
+          SizedBox(
+            height: 20,
+            width: 20,),
+                Container(
+                  width: 200.0,
+                  decoration: new BoxDecoration(
+                    image: new DecorationImage(
+                      image: ExactAssetImage('assets/carbon2.jpg'),
+                      fit: BoxFit.fitHeight,
+                    ),
+                  ),
+
+                ),
+                SizedBox(
+                  height: 20,
+                  width: 20,),
+                Container(
+                  width: 200.0,
+                  decoration: new BoxDecoration(
+                    image: new DecorationImage(
+                      image: ExactAssetImage('assets/carbon3.jpg'),
+                      fit: BoxFit.fitHeight,
+                    ),
+                  ),
+
+                ),
+                SizedBox(
+                  height: 20,
+                  width: 20,),
+                Container(
+                  width: 200.0,
+                  decoration: new BoxDecoration(
+                    image: new DecorationImage(
+                      image: ExactAssetImage('assets/carbon4.jpg'),
+                      fit: BoxFit.fitHeight,
+                    ),
+                  ),
+
+                ),
+                SizedBox(
+                  height: 20,
+                  width: 20,),
+              ],
+            ),
+        )
+
       ]
         )
-    )
+    ),
 
 
     );
