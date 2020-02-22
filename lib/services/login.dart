@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:screen_templates/services/register.dart';
+import 'package:screen_templates/views/result_page.dart';
 
 final emailController = new TextEditingController();
 final pwordController = new TextEditingController();
@@ -148,7 +149,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Center(
                           child: Text("Login",
                               style: Theme.of(context).textTheme.body1)),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ResultPage()));
+                      },
                     ),
                   ),
                 ),
